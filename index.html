@@ -8,17 +8,26 @@
   <body>
     <header>
       <nav>
-        <a href="index.html">Главная</a>
+        <ul>
+            <li><a href="#languages">Наши языки</a></li>
+            <li><a href="#process">Как проходит обучение</a></li>
+            <li><a href="#prices">Стоимость</a></li>
+            <li><a href="#signup">Запись</a></li>
+        </ul>
       </nav>
     </header>
 
     <main>
       <section>
         <h1>OxCamb School of Languages</h1>
-        <p>Живые занятия с преподавателем: английский, немецкий и китайский для детей и взрослых.</p>
-        <img src="images/I_love_English.avif" alt="Надпись I love English">
+        <p>Живые занятия с преподавателем: <b>английский</b>, <b>немецкий</b> и <b>китайский</b> для детей и взрослых.</p>
+        <figure>
+          <img src="images/I_love_English.avif" alt="Надпись I love English">
+          <figcaption>Учиться языкам легко и интересно</figcaption>
+        </figure>
       </section>
 
+      <hr>
 
       <section>
         <h2>Наши языки</h2>
@@ -29,19 +38,77 @@
         </ul>
       </section>
 
+      <hr>
+
       <section>
         <h2>Как проходит обучение?</h2>
         <ol>
           <li>Оставляете заявку</li>
-          <li>Проходите бесплатный тест уровня</li>
-          <li>Занимаетесь по индивидуальному плану обучения</li>
+          <li>Проходите <strong>бесплатный</strong> тест уровня</li>
+          <li>Занимаетесь по <em>индивидуальному</em> плану обучения</li>
         </ol>
         <a href="#">Записаться</a>
+      </section>
+
+      <section>
+        <h2>Стоимость занятий</h2>
+        <table>
+          <caption>Цены на индивидуальные занятия</caption>
+          <thead>
+            <tr>
+              <th>Язык</th>
+              <th>Длительность</th>
+              <th>Цена</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Английский</td>
+              <td>60 минут</td>
+              <td>1500₽</td>
+            </tr>
+            <tr>
+              <td>Немецкий</td>
+              <td>60 минут</td>
+              <td>1500₽</td>
+            </tr>
+            <tr>
+              <td>Китайский</td>
+              <td>60 минут</td>
+              <td>2000₽</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>Записаться на пробный урок</h2>
+        <form action="#" method="post">
+          <div>
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name">
+          </div>
+          <div>
+            <label for="phone">Номер телефона:</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div>
+            <label for="language">Язык</label>
+            <select name="language" id="language">
+              <option value="english">Английский</option>
+              <option value="german">Немецкий</option>
+              <option value="chinese">Китайский</option>
+            </select>
+          </div>
+          <button type="submit">Записаться</button>
+        </form>
       </section>
     </main>
 
     <footer>
-      <p>© 2026 OxCamb School of Languages</p>
+      <p><b>©</b> 2026 <span>OxCamb School of Languages</span></p>
     </footer>
   </body>
 </html>
