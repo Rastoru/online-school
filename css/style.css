@@ -14,6 +14,11 @@ body {
   padding-bottom: 100px;
 }
 
+::selection {
+  background-color: #1e3a8a;
+  color: white
+}
+
 .site-header {
   background-color: #1e3a8a;
   border-bottom: 3px solid #1d4ed8;
@@ -43,6 +48,19 @@ a {
   text-decoration: none;
 }
 
+a:focus {
+  border-bottom: 2px solid #2563eb;
+  outline: none;
+}
+
+a:hover {
+  color: #1e3a8a;
+}
+
+a:active {
+  color: #1d4ed8;
+}
+
 .nav-link {
   color: #ffffff;
 }
@@ -61,6 +79,28 @@ main {
   max-width: 800px;
   min-width: 320px;
   padding: 20px;
+}
+
+main ul,
+main ol {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+main li {
+  border-radius: 6px;
+  margin-bottom: 6px;
+  padding: 6px 12px;
+}
+
+main li:nth-child(odd) {
+  background-color: #f1f5f9;
+  color: #1e3a8a;
+}
+
+main li:nth-child(even) {
+  background-color: #e0ecff;
+  color: #1e293b;
 }
 
 section {
@@ -135,8 +175,13 @@ footer a {
   color: #93c5fd;
 }
 
-a:active {
-  color: #1d4ed8;
+footer a:hover {
+  color: #ffffff;
+}
+
+.nav-link:focus,
+footer a:focus {
+  border-bottom: 2px solid #93c5fd;
 }
 
 fieldset {
@@ -156,7 +201,10 @@ form div {
   margin-bottom: 12px;
 }
 
-input, select {
+input, 
+select {
+  background-color: #f8fafc;
+  color: #1e293b;
   border: 1px solid #94a3b8;
   border-radius: 6px;
   display: block;
@@ -168,11 +216,27 @@ input, select {
   width: 100%;
 }
 
+input::placeholder {
+  color: #64748b;
+  font-style: italic;
+  opacity: 1;
+}
+
+input:required {
+  border-left: 4px solid #2563eb;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   display: inline-block;
   margin-right: 6px;
   width: auto;
+}
+
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+  color: #2563eb;
+  font-weight: 600;
 }
 
 input:focus,
@@ -193,6 +257,13 @@ button {
   padding: 10px 20px;
 }
 
+button:focus,
+button[type="submit"]:focus,
+button[type="reset"]:focus {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+
 button[type="reset"] {
   background-color: #64748b;
   margin-left: 8px;
@@ -202,6 +273,14 @@ button[type="submit"]:hover {
   background-color: #1d4ed8;
 }
 
+button[type="submit"]:active {
+  background-color: #1e3a8a;
+}
+
 button[type="reset"]:hover {
   background-color: #8094b1;
+}
+
+button[type="reset"]:active {
+  background-color: #475569;
 }
