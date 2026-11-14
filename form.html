@@ -14,10 +14,10 @@
     <header class="site-header">
       <nav>
         <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Главная</a></li>
           <li><a class="nav-link" href="index.html#languages">Наши языки</a></li>
-          <li><a class="nav-link" href="index.html#process">Как проходит обучение</a></li>
           <li><a class="nav-link" href="index.html#prices">Стоимость</a></li>
-          <li><a class="nav-link" href="index.html#signup">Запись</a></li>
+          <li><a class="nav-link nav-link-active" href="form.html">Регистрация</a></li>
         </ul>
       </nav>
     </header>
@@ -25,12 +25,78 @@
     <main>
       <section>
         <h1>Регистрация нового студента</h1>
-        
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Личная информация</legend>
+
+            <div>
+              <label for="reg-name">Имя:</label>
+              <input type="text" id="reg-name" name="name" placeholder="Иван Иванов" required>
+            </div>
+
+            <div>
+              <label for="reg-birth">Дата рождения:</label>
+              <input type="date" id="reg-birth" name="birthdate" required>
+            </div>
+
+            <div>
+              <span>Пол:</span>
+              <label for="gender-male">
+                <input type="radio" id="gender-male" name="gender" value="male" required>
+                Мужской
+              </label>
+              <label for="gender-female">
+                <input type="radio" id="gender-female" name="gender" value="female">
+                Женский
+              </label>
+            </div>
+
+            <div>
+              <label for="reg-password">Пароль:</label>
+              <input type="password" id="reg-password" name="password" placeholder="Минимум 6 символов" minlength="6" required>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Контактные данные</legend>
+
+            <div>
+              <label for="reg-email">Email:</label>
+              <input type="email" id="reg-email" name="email" placeholder="name@example.com" required>
+            </div>
+
+            <div>
+              <label for="reg-phone">Телефон:</label>
+              <input type="tel" id="reg-phone" name="phone" placeholder="+7 (999) 123-45-67" required>
+            </div>
+
+            <div>
+              <span>Удобный интервал для связи:</span>
+              <label for="time-morning">
+                <input type="checkbox" id="time-morning" name="contact_time" value="morning">
+                Утро
+              </label>
+              <label for="time-day">
+                <input type="checkbox" id="time-day" name="contact_time" value="day">
+                День
+              </label>
+              <label for="time-evening">
+                <input type="checkbox" id="time-evening" name="contact_time" value="evening">
+                Вечер
+              </label>
+            </div>
+          </fieldset>
+
+          <div>
+            <button type="submit">&#10004; Зарегистрироваться</button>
+            <button type="reset">&#8634; Очистить</button>
+          </div>
+        </form>
       </section>
     </main>
 
     <footer>
-      <p><b>©</b> 2026 <span>OxCamb School of Languages</span></p>
+      <p class="copyright">2026 <span>OxCamb School of Languages</span></p>
       <p>
         <a href="mailto:info@oxcamb.ru">info@oxcamb.ru</a>
         <a href="tel:+74951234567">+7 (495) 123-45-67</a>

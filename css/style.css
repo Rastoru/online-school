@@ -11,7 +11,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding-top: 70px;
-  padding-bottom: 90px;
+  padding-bottom: 100px;
 }
 
 .site-header {
@@ -48,6 +48,11 @@ a {
 }
 
 .nav-link:hover {
+  color: #93c5fd;
+}
+
+.nav-link-active {
+  border-bottom: 2px solid #93c5fd;
   color: #93c5fd;
 }
 
@@ -90,7 +95,7 @@ td {
 footer {
   background-color: #0f172a;
   color: #ffffff;
-  padding: 16px;
+  padding: 2px;
   text-align: center;
   position: fixed;
   width: 100%;
@@ -124,4 +129,79 @@ img {
 .copyright::before {
   content: "© ";
   font-weight: 700;
+}
+
+footer a {
+  color: #93c5fd;
+}
+
+a:active {
+  color: #1d4ed8;
+}
+
+fieldset {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 16px;
+}
+
+legend {
+  color: #1e3a8a;
+  font-weight: 700;
+  padding: 0 8px;
+}
+
+form div {
+  margin-bottom: 12px;
+}
+
+input, select {
+  border: 1px solid #94a3b8;
+  border-radius: 6px;
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  margin-top: 4px;
+  max-width: 400px;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 6px;
+  width: auto;
+}
+
+input:focus,
+select:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+button {
+  background-color: #2563eb;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
+button[type="reset"] {
+  background-color: #64748b;
+  margin-left: 8px;
+}
+
+button[type="submit"]:hover {
+  background-color: #1d4ed8;
+}
+
+button[type="reset"]:hover {
+  background-color: #8094b1;
 }
